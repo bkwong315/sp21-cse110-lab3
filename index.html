@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Brian's Lab2</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="https://img.icons8.com/plasticine/100/000000/journal.png">
+    </head>
+    <body>
+        <header>
+            Header!
+        </header>
+        <nav>
+            <a href="#entry1">Entry 1</a>
+            <a href="#entry2">Entry 2</a>
+            <a href="#entry3">Entry 3</a>
+            <a href="#newEntry">Create Entry</a>
+        </nav>
+        <h1>
+            Welcome to My Journal!
+        </h1>
+        <div id="entry1" class="entry-wrapper">
+            <section class="entry-info">
+                <h2>
+                    CSE 105 Work Day
+                </h2>
+                <b>Date: 4/5/21</b>
+            </section>
+            <p>
+                I spent most of the day trying to get a better understanding of
+                CSE 110 material. A good amount of that time was just being stuck 
+                on the homework. I spent so long on doing modular arithmetic in 
+                base 3. I feel like I understand it, but I'm pretty sure that I don't 
+                understand anything. <br>
+            </p>
+            </div>
+        <hr>
+        <div id="entry2" class="entry-wrapper">
+            <section class="entry-info">
+                <h2>
+                    Long Day
+                </h2>
+                <b>Date: 4/6/21</b>
+            </section>
+            <p>
+                I woke up at 8am today! It's the earliest I've gotten up in a while. 
+                I was hoping that this would help fix my sleep schedule even if only by 
+                a little bit. Sadly, it did not.
+
+                <h3>CheckList of Tasks</h3>
+                <ul>
+                    <li><input type="checkbox" checked> Go outside for a walk or something.</li>
+                    <li><input type="checkbox" >
+                        Attend all my synchronous lectures.
+                        <ol>
+                            <li><input type="checkbox">Cogs 107A Discussion</li>
+                            <li><input type="checkbox" checked>CSE 110 Lecture</li>
+                        </ol>
+                    </li>
+                    <li><input type="checkbox"> Go to sleep before 12am.</li>
+                    <li><input type="checkbox"> Cook that pasta recipe.</li>
+                </ul>
+            </p>
+            </div>
+        <hr>
+        <div id="entry3" class="entry-wrapper">
+            <section class="entry-info">
+                <h2>
+                    Random Possibly Interesting Stuff
+                </h2>
+                <b>Date: 4/7/21</b>
+            </section>
+            <p>
+                Content!
+            </p>
+            <img src="https://i.pinimg.com/originals/91/8e/75/918e750f5e8af639dcf7b09d9421cb8e.jpg", alt="optical illusion">
+            <details>
+                <summary>My thoughts</summary>
+                <p>It kinda hurts your head doesn't it?</p>
+            </details>
+            <video controls>
+                <source src="./media/video/cardTrick.mp4" type="video/mp4">
+            </video> <br>
+            Sound effect: <br>
+            <audio controls>
+                <source src="./media/audio/hc_attack2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <hr>
+        <div class="entry-wrapper">
+            <h2 id="newEntry">
+                Create New Entry
+            </h2>
+            <form action="" method="get" id="formNewEntry">
+                <span>Title:</span> <input type="text" name="title" required>
+                <span>Date:</span> <input type="date" name="title" required> <br>
+                <span>Text:</span> <input type="text" name="title" required> <br>
+                <textarea rows="4" cols="50" name="content" form="formNewEntry">Insert text</textarea> <br>
+                <span>First meal of the day: </span><input list="firstMeal" name="formNewEntry"> <br>
+                <datalist id="firstMeal">
+                    <option value="Breakfast"></option>
+                    <option value="Lunch"></option>
+                    <option value="Dinner"></option>
+                </datalist>
+                <span>Insert poll:</span> <input type="checkbox" name="formNewEntry"> <br>
+                <span>Insert Question: </span> <input type="text" name="title"> <br>
+                <input type="radio" name="formNewEntry"><input type="text" name="title"><br>
+                <input type="radio" name="formNewEntry"><input type="text" name="title"><br>
+                <input type="radio" name="formNewEntry"><input type="text" name="title"><br>
+                <span>Insert new media: </span><input type="checkbox" name="formNewEntry"> <br>
+                <span>Select media type:</span>
+                <select>
+                    <option value="empty"></option>
+                    <option value="image">image</option>
+                    <option value="audio">audio</option>
+                    <option value="video">video</option>
+                </select> <br>
+                <button>Create</button>
+            </form>
+        </div>
+        <footer>
+            <a href="https://icons8.com/icon/67346/journal">Journal icon by Icons8</a>
+        </footer>
+    </body>
+</html>
