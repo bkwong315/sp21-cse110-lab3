@@ -1,0 +1,68 @@
+/*
+    CSS Checklist
+    [ ] - Color (rgb, hex, hsl, name)
+    [X] - Background
+    [ ] - Unit (3 relative, 3 absolute)
+            - vw (relative)
+            - % (relative)
+            - px (absolute)
+    [ ] - Box Model (margin, padding, borders)
+    [ ] - Text (color, text-decoration, text-align)
+            - color
+            - text-decoration
+    [ ] - Display(include 2: none, block, inline-bloc, inline)
+            - Inline-block
+    [X] - Sizing (set height/width, set min & max height/width)
+    [ ] - Position (include 2: static, relative, fixed, aboslute, sticky)
+    [ ] - Pseduo-classes (:hover, :active)
+            - :hover
+    [ ] - Flexbox (requires <= 2 children & <= 3 flexbox attributes)
+    [ ] - Grid (requires <= 2 children & <= 3 grid attributes)
+    [ ] - Media Query (at least 1 element needs a media query)
+    [ ] - Fonts (use a 3rd party font)
+    
+    CSS Selectors
+    [ ] - class selector (.class)
+    [ ] - ID selector (#id)
+    [ ] - Universal selector (*)
+    [ ] - Element selector (element)
+    [ ] - Attribute selector ([attribute=foo])
+    [X] - Pseduo-class selector (p::hover)
+    [ ] - Selector selector (element, element)
+    [ ] - Descendant Combinator (element element)
+    [X] - Child Combinator (element > element)
+    [ ] - General sibling Combinator (element ~ element)
+    [ ] - Adjacent sibling Combinator (element + element)
+    [ ] - Combining Two Selectors (element.class)
+    
+*/
+
+body {
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    min-height: 5%;
+    height: 10%;
+    max-height: 15%; 
+    background-color: rgb(60, 60, 73);
+}
+
+header > nav {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+}
+
+header > nav > a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+header > nav > a:hover{
+    transform: scale(1.1);
+}
