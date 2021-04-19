@@ -30,7 +30,7 @@
             - :active
     [X] - Flexbox (requires >= 2 children & >= 3 flexbox attributes)
     [X] - Grid (requires >= 2 children & >= 3 grid attributes)
-    [ ] - Media Query (at least 1 element needs a media query)
+    [X] - Media Query (at least 1 element needs a media query)
     [X] - Fonts (use a 3rd party font)
     
     CSS Selectors
