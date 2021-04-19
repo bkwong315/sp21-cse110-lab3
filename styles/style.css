@@ -1,6 +1,10 @@
 /*
     CSS Checklist
-    [ ] - Color (rgb, hex, hsl, name)
+    [X] - Color (rgb, hex, hsl, name)
+            - rgb()
+            - name
+            - hsl
+            - hex
     [X] - Background
     [ ] - Unit (3 relative, 3 absolute)
             - vw (relative)
@@ -14,21 +18,22 @@
             - Inline-block
     [X] - Sizing (set height/width, set min & max height/width)
     [ ] - Position (include 2: static, relative, fixed, aboslute, sticky)
+            - sticky
     [ ] - Pseduo-classes (:hover, :active)
             - :hover
-    [ ] - Flexbox (requires <= 2 children & <= 3 flexbox attributes)
-    [ ] - Grid (requires <= 2 children & <= 3 grid attributes)
+    [X] - Flexbox (requires >= 2 children & >= 3 flexbox attributes)
+    [ ] - Grid (requires >= 2 children & >= 3 grid attributes)
     [ ] - Media Query (at least 1 element needs a media query)
-    [ ] - Fonts (use a 3rd party font)
+    [X] - Fonts (use a 3rd party font)
     
     CSS Selectors
-    [ ] - class selector (.class)
+    [X] - class selector (.class)
     [ ] - ID selector (#id)
-    [ ] - Universal selector (*)
-    [ ] - Element selector (element)
+    [X] - Universal selector (*)
+    [X] - Element selector (element)
     [ ] - Attribute selector ([attribute=foo])
     [X] - Pseduo-class selector (p::hover)
-    [ ] - Selector selector (element, element)
+    [X] - Selector selector (element, element)
     [ ] - Descendant Combinator (element element)
     [X] - Child Combinator (element > element)
     [ ] - General sibling Combinator (element ~ element)
@@ -37,8 +42,12 @@
     
 */
 
-body {
+* {
     margin: 0;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -65,4 +74,20 @@ header > nav > a {
 
 header > nav > a:hover{
     transform: scale(1.1);
+}
+
+.entry-wrapper {
+    width: 50%;
+    background-color: hsl(41, 100%, 70%);
+    box-shadow: 10px 5px 35px #3617a7;
+}
+
+.entry-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(60, 60, 73);
+    color: white;
+    padding: 0 0;
 }
