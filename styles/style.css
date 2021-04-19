@@ -6,11 +6,13 @@
             - hsl
             - hex
     [X] - Background
-    [ ] - Unit (3 relative, 3 absolute)
+    [X] - Unit (3 relative, 3 absolute)
             - vw (relative)
             - % (relative)
+            - em (relative)
             - px (absolute)
             - in (absolute)
+            - pc (absolute)
     [X] - Box Model (margin, padding, borders)
     [X] - Text (color, text-decoration, text-align)
             - color
@@ -36,7 +38,7 @@
     [X] - ID selector (#id)
     [X] - Universal selector (*)
     [X] - Element selector (element)
-    [ ] - Attribute selector ([attribute=foo])
+    [X] - Attribute selector ([attribute=foo])
     [X] - Pseduo-class selector (p::hover)
     [X] - Selector selector (element, element)
     [X] - Descendant Combinator (element element)
@@ -67,9 +69,9 @@ header {
 }
 
 header > nav {
-    font-size: 20px;
+    font-size: 1.2em;
     color: white;
-    padding: 10px;
+    padding: .75pc;
 }
 
 header > nav > a {
@@ -91,6 +93,12 @@ header > nav > a:active{
     width: 50%;
     background-color: hsl(41, 100%, 70%);
     box-shadow: 10px 5px 35px #3617a7;
+}
+
+@media only screen and (max-width: 800px) {
+    .entry-wrapper {
+        box-shadow: 10px 5px 35px #a71717;
+    }
 }
 
 .entry-info {
@@ -140,4 +148,18 @@ p ~ ul {
 h1 {
     border-bottom: solid rgb(60, 60, 73) 5px;
     text-align: center;
+}
+
+span[class="form-title"] {
+    color:rgb(25, 0, 255);
+}
+
+#newEntry {
+    background-color: rgb(60, 60, 73);
+    color: white;
+    padding: 0 0;
+}
+
+textarea {
+    max-width: 100%;
 }
