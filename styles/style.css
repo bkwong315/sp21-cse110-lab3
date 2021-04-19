@@ -10,12 +10,15 @@
             - vw (relative)
             - % (relative)
             - px (absolute)
-    [ ] - Box Model (margin, padding, borders)
-    [ ] - Text (color, text-decoration, text-align)
+            - in (absolute)
+    [X] - Box Model (margin, padding, borders)
+    [X] - Text (color, text-decoration, text-align)
             - color
             - text-decoration
+            - text align
     [X] - Display(include 2: none, block, inline-bloc, inline)
             - Inline-block
+            - inline
     [X] - Sizing (set height/width, set min & max height/width)
     [X] - Position (include 2: static, relative, fixed, aboslute, sticky)
             - sticky
@@ -24,13 +27,13 @@
             - :hover
             - :active
     [X] - Flexbox (requires >= 2 children & >= 3 flexbox attributes)
-    [ ] - Grid (requires >= 2 children & >= 3 grid attributes)
+    [X] - Grid (requires >= 2 children & >= 3 grid attributes)
     [ ] - Media Query (at least 1 element needs a media query)
     [X] - Fonts (use a 3rd party font)
     
     CSS Selectors
     [X] - class selector (.class)
-    [ ] - ID selector (#id)
+    [X] - ID selector (#id)
     [X] - Universal selector (*)
     [X] - Element selector (element)
     [ ] - Attribute selector ([attribute=foo])
@@ -38,9 +41,9 @@
     [X] - Selector selector (element, element)
     [X] - Descendant Combinator (element element)
     [X] - Child Combinator (element > element)
-    [ ] - General sibling Combinator (element ~ element)
-    [ ] - Adjacent sibling Combinator (element + element)
-    [ ] - Combining Two Selectors (element.class)
+    [X] - General sibling Combinator (element ~ element)
+    [X] - Adjacent sibling Combinator (element + element)
+    [X] - Combining Two Selectors (element.class)
     
 */
 
@@ -60,6 +63,7 @@ header {
     height: 10%;
     max-height: 15%; 
     background-color: rgb(60, 60, 73);
+    z-index: 10000;
 }
 
 header > nav {
@@ -106,7 +110,7 @@ header > nav > a:active{
     margin: auto;
 }
 
-#entry3 .entry-content-wrapper {
+#entry3 div.entry-content-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,4 +120,24 @@ header > nav > a:active{
     height: 90%;
     width: 90%;
     margin: auto;
+}
+
+.theGrid {
+    display: grid;
+    justify-items: center;
+    row-gap: .25in;
+    align-items: center;
+}
+
+p + h3 {
+    color:royalblue
+}
+
+p ~ ul {
+    color: midnightblue;
+}
+
+h1 {
+    border-bottom: solid rgb(60, 60, 73) 5px;
+    text-align: center;
 }
